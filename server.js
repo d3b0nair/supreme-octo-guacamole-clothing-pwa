@@ -4,6 +4,7 @@ const path = require("path");
 const stripeUtils = require("./server-utils/stripe/server.stripe.utils");
 const firestore_server_utils = require("./server-utils/firestore/server.firestore.utils");
 const compression = require("compression");
+var enforce = require('express-sslify');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -20,25 +21,7 @@ app.use((req, res, next) => {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "client/build")));
 app.use(express.static("public"));
-app.use((req, res, next) => {
-  const address = "supreme-octo-guacamole-cloting.herokuapp.com";
-  const hostname =
-    req.hostname === `www.${address}` ? `${address}` : req.hostname;
-
-  if (
-    req.headers["x-forwarded-proto"] === "http" ||
-    req.hostname === `${address}`
-  ) {
-    res.redirect(301, `https://${hostname}${req.url}`);
-    return;
-  }
-
-  res.setHeader(
-    "strict-transport-security",
-    "max-age=31536000; includeSubDomains; preload"
-  );
-  next();
-});
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 app.get("*", (req, res) => {
   const index = path.join(__dirname, "client/build", "index.html");

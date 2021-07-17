@@ -1,0 +1,15 @@
+# Node build artifacts
+node_modules
+client/node_modules
+npm-debug.log
+
+# Local development
+client/build
+client/.eslintcache
+*.env
+*.dev
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml

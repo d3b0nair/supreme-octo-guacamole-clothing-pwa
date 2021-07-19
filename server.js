@@ -21,7 +21,14 @@ app.use((req, res, next) => {
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "client/build")));
 app.use(express.static("public"));
-app.use(enforce.HTTPS({ trustProtoHeader: true }));
+if (process.env.NODE_ENV === 'production') {
+  app.use(compression);
+  app.use(enforce.HTTPS({ trustProtoHeader: true }));
+  app.use(express.static(path.join(__dirname, 'client/build')));
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
 
 app.get("*", (req, res) => {
   const index = path.join(__dirname, "client/build", "index.html");

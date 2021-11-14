@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartDropdown component should mount 1`] = `
+<div>
+  <div
+    class="sc-eCImPb ijRBdG"
+  >
+    <div
+      class="sc-jRQBWg fEnDWv"
+    >
+      <span
+        class="sc-iCfMLu bXFgRT"
+      >
+        Your cart is empty
+      </span>
+    </div>
+    <button
+      class="sc-hKwDye hzDzeB sc-gKclnd cjNBCc"
+    >
+      GO TO CHECKOUT
+    </button>
+  </div>
+</div>
+`;

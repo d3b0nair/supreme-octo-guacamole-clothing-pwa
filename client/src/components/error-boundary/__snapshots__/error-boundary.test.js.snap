@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary component should mount 1`] = `
+<styled.div>
+  <styled.div
+    imageUrl="https://i.imgur.com/3suxlvm.png"
+  />
+  <styled.h2>
+    Oh no! We tripped up!
+  </styled.h2>
+  <styled.h3>
+    You had been told you should always check your shoes before getting up from the bleachers. Freshman were known to walk under them and tie peoples’ shoes together.
+  </styled.h3>
+  <CustomButton
+    inverted={true}
+    onClick={[Function]}
+  >
+    RELOAD PAGE
+  </CustomButton>
+</styled.div>
+`;

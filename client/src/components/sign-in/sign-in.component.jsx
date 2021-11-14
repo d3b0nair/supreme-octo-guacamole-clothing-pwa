@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
 import FormInput from "../form-input/form-input.component";
@@ -9,16 +9,37 @@ import {
   emailSignInStart,
 } from "../../redux/user/user.actions";
 
+import { createStructuredSelector } from "reselect";
+import { selectUserError } from "../../redux/user/user.selector";
+
 import {
   SignInContainer,
   TitleContainer,
   ButtonsBarContainer,
 } from "./sign-in.styles.jsx";
 
-function SignIn({ googleSignInStart, emailSignInStart }) {
+import { TextMsg, TextContainer } from "../sign-up/sign-up.styles.jsx";
+
+const ErrorMsgOnCredentialsDontMatch = ({ credentialsDontMatch, userError }) =>
+  credentialsDontMatch ? (
+    <TextContainer>
+      <TextMsg>
+        {userError.code === "auth/too-many-requests"
+          ? " Access to this account has been temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later."
+          : "❌ Password/Email doesn't match"}
+      </TextMsg>
+    </TextContainer>
+  ) : null;
+
+export function SignIn({ googleSignInStart, emailSignInStart, userError }) {
+  const [credentialsDontMatch, setCredentialsDontMatch] = useState(null);
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const { email, password } = credentials;
-
+  useEffect(() => {
+    if (userError) {
+      setCredentialsDontMatch(true);
+    }
+  }, [userError]);
   const handleSubmit = async (e) => {
     e.preventDefault();
     emailSignInStart(email, password);
@@ -50,9 +71,15 @@ function SignIn({ googleSignInStart, emailSignInStart }) {
           handleChange={handleChange}
           required
         />
+        <ErrorMsgOnCredentialsDontMatch
+          credentialsDontMatch={credentialsDontMatch}
+          userError={userError}
+        />
+
         <ButtonsBarContainer>
           <CustomButton type="submit">Sign in</CustomButton>
           <CustomButton
+            data-testid="CustomButtonForGoogleSignInStart"
             type="button"
             onClick={googleSignInStart}
             isGoogleSignIn
@@ -64,11 +91,13 @@ function SignIn({ googleSignInStart, emailSignInStart }) {
     </SignInContainer>
   );
 }
-
+const mapStateToProps = createStructuredSelector({
+  userError: selectUserError,
+});
 const mapDispatchToProps = (dispatch) => ({
   googleSignInStart: () => dispatch(googleSignInStart()),
   emailSignInStart: (email, password) =>
     dispatch(emailSignInStart({ email, password })),
 });
 
-export default connect(null, mapDispatchToProps)(SignIn);
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

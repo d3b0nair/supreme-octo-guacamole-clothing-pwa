@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { fetchOrderStart } from "../../redux/order/order.actions";
 import OrderContainer from "../../components/order-item/order-item.container";
 
-function InvoicePage(props) {
+export function InvoicePage(props) {
   const { fetchOrder } = props;
   useEffect(() => {
     fetchOrder(props.match.params.id);

@@ -1,6 +1,7 @@
 # Node build artifacts
 node_modules
 client/node_modules
+client/.eslintcache
 npm-debug.log
 
 # Local development

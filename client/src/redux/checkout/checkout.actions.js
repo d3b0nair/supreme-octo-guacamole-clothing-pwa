@@ -20,8 +20,9 @@ export const createOrder_START = (id, items, customer, total) => ({
   type: CheckoutActionTypes.CREATE_ORDER_START,
   payload: { id, items, customer, total },
 });
-export const createOrder_FAIL = () => ({
+export const createOrder_FAIL = (errorMsg) => ({
   type: CheckoutActionTypes.CREATE_ORDER_FAIL,
+  payload: errorMsg,
 });
 export const createOrder_SUCCESS = () => ({
   type: CheckoutActionTypes.CREATE_ORDER_SUCCESS,

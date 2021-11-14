@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionItem component should mount 1`] = `
+<div>
+  <div
+    class="sc-gsDKAQ cxkvTq"
+  >
+    <div
+      class="sc-dkPtRN fRRZdH image"
+    />
+    <div
+      class="sc-hKwDye mbOMF"
+    >
+      <span
+        class="sc-eCImPb jgGulH"
+      />
+      <span
+        class="sc-jRQBWg bIGsJs"
+      >
+        $
+      </span>
+    </div>
+    <button
+      class="sc-bdvvtL gRKetO sc-gKclnd ePLOnP"
+      data-testid="AddToCartButton"
+    >
+      Add to cart
+    </button>
+  </div>
+</div>
+`;

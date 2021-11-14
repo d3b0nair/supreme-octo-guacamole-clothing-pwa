@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Invoice Page component should mount 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL kHeCUE"
+  >
+    <div
+      class="sc-gsDKAQ bMJKwb"
+    />
+  </div>
+</div>
+`;

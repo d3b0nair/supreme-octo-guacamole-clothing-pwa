@@ -1,6 +1,6 @@
 import StripeActionTypes from "./stripe.types";
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   paymentIntentId: null,
   clientSecret: null,
   paymentIntentError: null,
@@ -32,11 +32,19 @@ const stripeReducer = (state = INITIAL_STATE, action) => {
         ...state,
         paymentIntentError: action.payload,
       };
+    case StripeActionTypes.CREATE_CLIENT_SECRET_FAIL:
     case StripeActionTypes.CANCEL_CLIENT_SECRET_FAIL:
-    case StripeActionTypes.UPDATE_CLIENT_SECRET_FAIL:
       return {
         ...state,
         clientSecretError: action.payload,
+      };
+    case StripeActionTypes.STRIPE_RESET:
+      return {
+        ...state,
+        paymentIntentId: null,
+        clientSecret: null,
+        paymentIntentError: null,
+        clientSecretError: null,
       };
     default:
       return state;

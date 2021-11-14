@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Collection component should mount 1`] = `
+<div>
+  <div
+    class="sc-iCfMLu iRZbeT"
+  >
+    <h2
+      class="sc-furwcr dFENJw"
+    />
+    <div
+      class="sc-pVTFL ehVcDl"
+    />
+  </div>
+</div>
+`;

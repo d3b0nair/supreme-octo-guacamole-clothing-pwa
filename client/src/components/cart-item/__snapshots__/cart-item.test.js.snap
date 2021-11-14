@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartIcon component should mount 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL bpFOcX"
+  >
+    <img
+      alt=""
+      class="sc-gsDKAQ jCtDRh"
+      src="http://localhost/"
+    />
+    <div
+      class="sc-dkPtRN beJrup"
+    >
+      <span />
+      <span>
+        1
+         x $
+        1
+      </span>
+    </div>
+  </div>
+</div>
+`;

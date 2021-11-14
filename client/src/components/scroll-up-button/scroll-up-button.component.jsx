@@ -6,7 +6,10 @@ import { ReactComponent as UpIcon } from "../../assets/scrollUp.svg";
 
 function ScrollUpButton() {
   return (
-    <ScrollUpButtonContainer onClick={() => window.scrollTo(0, 0)}>
+    <ScrollUpButtonContainer
+      data-testid="ScrollUpButtonContainer"
+      onClick={() => window.scrollTo(0, 0)}
+    >
       <UpIcon />
     </ScrollUpButtonContainer>
   );

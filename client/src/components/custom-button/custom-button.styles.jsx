@@ -49,7 +49,7 @@ export const CustomButtonContainer = styled.button`
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
-  font-size: 15px;
+  font-size: 14px;
   text-transform: uppercase;
   font-family: "Open Sans Condensed";
   font-weight: bolder;
@@ -63,6 +63,9 @@ export const CustomButtonContainer = styled.button`
   @media screen and (max-width: 800px) {
     min-width: unset;
     margin-bottom: 10px;
+  }
+  @media screen and (max-width: 300px) {
+    line-height: unset;
   }
   &:active {
     transform: scale(0.98);

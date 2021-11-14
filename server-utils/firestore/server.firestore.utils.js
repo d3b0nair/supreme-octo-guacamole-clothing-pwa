@@ -1,5 +1,5 @@
-const firebase = require("firebase/app");
-require("firebase/firestore");
+const firebase = require("firebase/compat/app");
+require("firebase/compat/firestore");
 
 const config = {
   apiKey: "AIzaSyC4ZiNHrxkU-CC333rS6yBcy6Dbla_azok",

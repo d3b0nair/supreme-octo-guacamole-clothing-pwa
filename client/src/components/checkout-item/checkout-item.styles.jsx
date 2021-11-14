@@ -36,6 +36,10 @@ export const CheckoutItemContainer = styled.div`
   border-bottom: 1px solid white;
   font-size: 20px;
   align-items: center;
+  @media screen and (max-width: 300px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -59,11 +63,9 @@ export const QuantityCollumn = styled.span`
   display: flex;
   justify-content: center;
 `;
-
 export const ArrowSymbol = styled.div`
   ${buttonStyle}
 `;
-
 export const ItemValue = styled.div`
   margin: 0 10px;
 `;
@@ -71,7 +73,6 @@ export const ItemValue = styled.div`
 export const RemoveButton = styled.div`
   ${buttonStyle}
 `;
-
 export const RemoveButtonWrapper = styled.div`
   text-align: center;
   display: flex;

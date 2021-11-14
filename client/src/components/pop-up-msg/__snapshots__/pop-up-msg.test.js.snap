@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopUpMsg component should mount 1`] = `
+<div>
+  <div
+    class="sc-gsDKAQ kVZzFU"
+  >
+    <span
+      class="sc-hKwDye dLUxtG"
+      data-testid="CloseBtn"
+    >
+      <svg>
+        closeBtn.svg
+      </svg>
+    </span>
+    <p
+      class="sc-dkPtRN diaXdX"
+    />
+    <button
+      class="sc-bdvvtL gRKetO"
+      data-testid="CustomButton"
+      style="width: 100%;"
+    />
+  </div>
+</div>
+`;

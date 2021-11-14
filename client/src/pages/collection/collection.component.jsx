@@ -11,7 +11,7 @@ import {
   CollectionPageItems,
 } from "./collection.styles.jsx";
 
-function CollectionPage({ collection }) {
+export function CollectionPage({ collection }) {
   const { title, items } = collection;
   return (
     <CollectionPageContainer>

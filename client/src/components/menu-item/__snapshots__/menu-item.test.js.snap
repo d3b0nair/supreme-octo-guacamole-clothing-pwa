@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuItem component should mount 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL kaPJzZ"
+    data-testid="MenuItemContainer"
+  >
+    <div
+      class="sc-gsDKAQ fbXhpm background-image"
+    />
+    <div
+      class="sc-dkPtRN deKDcd content"
+    >
+      <span
+        class="sc-hKwDye YGhmR"
+      >
+        HATS
+      </span>
+      <span
+        class="sc-eCImPb dBNPlT"
+      >
+        SHOP NOW
+      </span>
+    </div>
+  </div>
+</div>
+`;

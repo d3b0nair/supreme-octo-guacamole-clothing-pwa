@@ -16,9 +16,10 @@ import {
   LogoContainer,
   OptionsContainer,
   OptionLink,
+  CartDropdownContainer,
 } from "./header.styles";
 
-function Header({ currentUser, hidden, signOutStart }) {
+export function Header({ currentUser, hidden, signOutStart }) {
   const [scrollDown, setScrollDown] = useState(false);
   const listenScrollEvent = () => {
     window.scrollY > 500 ? setScrollDown(true) : setScrollDown(false);
@@ -30,13 +31,17 @@ function Header({ currentUser, hidden, signOutStart }) {
     <>
       <HeaderContainer>
         <LogoContainer to="/">
-          <Logo className="logo" />
+          <Logo alt="logo" className="logo" />
         </LogoContainer>
         <OptionsContainer>
           <OptionLink to="/shop">SHOP</OptionLink>
           <OptionLink to="/shop">CONTACT</OptionLink>
           {currentUser ? (
-            <OptionLink as="div" onClick={signOutStart}>
+            <OptionLink
+              data-testid="signout-link"
+              as="div"
+              onClick={signOutStart}
+            >
               SIGN OUT
             </OptionLink>
           ) : (
@@ -44,7 +49,11 @@ function Header({ currentUser, hidden, signOutStart }) {
           )}
           <CartIcon />
         </OptionsContainer>
-        {hidden ? null : <CartDropdown />}
+        {hidden ? null : (
+          <CartDropdownContainer data-testid="CartDropdown">
+            <CartDropdown />
+          </CartDropdownContainer>
+        )}
       </HeaderContainer>
       {scrollDown ? <ScrollUpButton /> : null}
     </>

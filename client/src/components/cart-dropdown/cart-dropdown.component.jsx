@@ -4,8 +4,8 @@ import { selectCartItems } from "../../redux/cart/cart.selector";
 import { createStructuredSelector } from "reselect";
 import { withRouter } from "react-router-dom";
 import { toggleCartHidden } from "../../redux/cart/cart.actions";
-
 import CartItem from "../cart-item/cart-item.component";
+import * as handleClickHelper from "./cart-dropdown.component";
 
 import {
   CartDropdownContainer,
@@ -14,7 +14,11 @@ import {
   EmptyMsgWrapper,
 } from "./cart-dropdown.styles";
 
-function CartDropdown({ cartItems, history, dispatch }) {
+export const handleClick = (history, dispatch) => {
+  history.push("/checkout");
+  dispatch(toggleCartHidden());
+};
+export function CartDropdown({ cartItems, history, dispatch }) {
   return (
     <CartDropdownContainer>
       <CartItemsContainer>
@@ -27,10 +31,7 @@ function CartDropdown({ cartItems, history, dispatch }) {
         )}
       </CartItemsContainer>
       <ButtonWrapper
-        onClick={() => {
-          history.push("/checkout");
-          dispatch(toggleCartHidden());
-        }}
+        onClick={() => handleClickHelper.handleClick(history, dispatch)}
       >
         GO TO CHECKOUT
       </ButtonWrapper>

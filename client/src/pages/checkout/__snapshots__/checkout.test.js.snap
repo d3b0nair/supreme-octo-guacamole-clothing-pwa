@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkout component should mount 1`] = `
+<div>
+  <div
+    class="sc-bqiRlB jFiSo"
+  >
+    <div
+      class="sc-fotOHu iYUZQW"
+    >
+      <div
+        class="sc-fFeiMQ hwlXzM"
+      >
+        <div
+          class="sc-ksdxgE bbYwPF"
+        >
+          <div>
+            <span>
+              Product
+            </span>
+          </div>
+          <div>
+            <span>
+              Description
+            </span>
+          </div>
+          <div>
+            <span>
+              Quantity
+            </span>
+          </div>
+          <div>
+            <span>
+              Price
+            </span>
+          </div>
+          <div>
+            <span>
+              Remove
+            </span>
+          </div>
+        </div>
+        <div
+          class="sc-gsDKAQ ksGHNo"
+        >
+          <div
+            class="sc-dkPtRN gUwQJy"
+          >
+            <img
+              alt="item"
+              class="sc-hKwDye gkmiPh"
+            />
+          </div>
+          <span
+            class="sc-eCImPb fqRrfq"
+          />
+          <span
+            class="sc-jRQBWg fGFNQO"
+          >
+            <div
+              class="sc-gKclnd lcsmPG"
+              data-testid="remove-checkout-item"
+            >
+              ❮
+            </div>
+            <div
+              class="sc-iCfMLu jHWOzV"
+            />
+            <div
+              class="sc-gKclnd lcsmPG"
+              data-testid="add-checkout-item"
+            >
+              ❯
+            </div>
+          </span>
+          <span
+            class="sc-eCImPb fqRrfq"
+          >
+            $
+          </span>
+          <div
+            class="sc-pVTFL fjkOjk"
+          >
+            <div
+              class="sc-furwcr gxgspo"
+              data-testid="clear-checkout-item"
+            >
+              ✕
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-gsDKAQ ksGHNo"
+        >
+          <div
+            class="sc-dkPtRN gUwQJy"
+          >
+            <img
+              alt="item"
+              class="sc-hKwDye gkmiPh"
+            />
+          </div>
+          <span
+            class="sc-eCImPb fqRrfq"
+          />
+          <span
+            class="sc-jRQBWg fGFNQO"
+          >
+            <div
+              class="sc-gKclnd lcsmPG"
+              data-testid="remove-checkout-item"
+            >
+              ❮
+            </div>
+            <div
+              class="sc-iCfMLu jHWOzV"
+            />
+            <div
+              class="sc-gKclnd lcsmPG"
+              data-testid="add-checkout-item"
+            >
+              ❯
+            </div>
+          </span>
+          <span
+            class="sc-eCImPb fqRrfq"
+          >
+            $
+          </span>
+          <div
+            class="sc-pVTFL fjkOjk"
+          >
+            <div
+              class="sc-furwcr gxgspo"
+              data-testid="clear-checkout-item"
+            >
+              ✕
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-hBUSln gnsOKe"
+    >
+      TOTAL: $
+      500
+    </div>
+    <button
+      class="sc-bdvvtL fNaNEb"
+      style="margin: 3vh 0px 3vh 0px;"
+    >
+      Proceed with payment
+    </button>
+  </div>
+</div>
+`;

@@ -10,7 +10,7 @@ import {
   ItemCountWrapper,
 } from "./cart-icon.styles";
 
-function CartIcon({ toggleCartHidden, itemCount }) {
+export function CartIcon({ toggleCartHidden, itemCount }) {
   return (
     <CartIconWrapper onClick={toggleCartHidden}>
       <ShoppingIconWrapper />

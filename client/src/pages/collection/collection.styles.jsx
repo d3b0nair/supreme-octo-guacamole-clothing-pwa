@@ -3,9 +3,7 @@ import styled from "styled-components";
 export const CollectionPageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center
-
-
+  align-items: center;
 `;
 
 export const CollectionPageTitle = styled.h2`
@@ -20,7 +18,7 @@ export const CollectionPageItems = styled.div`
   @media screen and (max-width: 888px) {
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
   }
 
   & .collection-item {

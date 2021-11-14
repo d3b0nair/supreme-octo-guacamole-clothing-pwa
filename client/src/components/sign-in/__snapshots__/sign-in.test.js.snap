@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn component should mount 1`] = `
+<div>
+  <div
+    class="sc-eCImPb kiJsgT"
+  >
+    <h2
+      class="sc-jRQBWg hRSpAi"
+    >
+      I already have an account
+    </h2>
+    <span>
+      Sign in with your email and password
+    </span>
+    <form>
+      <div
+        class="sc-bdvvtL hMBGla"
+      >
+        <input
+          class="sc-gsDKAQ hVBime"
+          data-testid="FormInputContainer"
+          name="email"
+          required=""
+          type="email"
+        />
+        <label
+          class="sc-dkPtRN jpMQjL  form-input-label"
+          data-testid="FormInputLabel"
+        >
+          E-Mail
+        </label>
+      </div>
+      <div
+        class="sc-bdvvtL hMBGla"
+      >
+        <input
+          class="sc-gsDKAQ hVBime"
+          data-testid="FormInputContainer"
+          name="password"
+          required=""
+          type="password"
+        />
+        <label
+          class="sc-dkPtRN jpMQjL  form-input-label"
+          data-testid="FormInputLabel"
+        >
+          Password
+        </label>
+      </div>
+      <div
+        class="sc-gKclnd idUVbs"
+      >
+        <button
+          class="sc-hKwDye hzDzeB"
+          type="submit"
+        >
+          Sign in
+        </button>
+        <button
+          class="sc-hKwDye hPNorZ"
+          data-testid="CustomButtonForGoogleSignInStart"
+          type="button"
+        >
+          Sign in with Google
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

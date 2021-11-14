@@ -1,27 +1,28 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-import { frostedGlass } from "../../global.styles";
+import {
+  frostedGlass,
+  globalOpacityTransition,
+  globalPulseAnimation,
+} from "../../global.styles";
+
+const moveUpAnim = keyframes`
+0%{
+  top: 100%
+}
+100%{
+  top: 90%
+}
+`;
 
 export const ScrollUpButtonContainer = styled.div`
-  @keyframes pulse {
-    100% {
-      box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);
-    }
-  }
-  @keyframes opacityTransition {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
   svg {
     width: 50px;
     height: 50px;
   }
-  animation: pulse 1s 0.8s 3 cubic-bezier(0.79, 0.12, 0.63, 0.24),
-  opacityTransition 1s 1 ease-in-out;
+  animation: ${moveUpAnim} 0.8s 1 cubic-bezier(0.79, 0.12, 0.63, 0.24),
+    ${globalPulseAnimation} 1s 1 cubic-bezier(0.79, 0.12, 0.63, 0.24),
+    ${globalOpacityTransition} 0.8s 1 cubic-bezier(0.79, 0.12, 0.63, 0.24);
   position: fixed;
   right: 20px;
   top: 90%;
@@ -37,3 +38,4 @@ export const ScrollUpButtonContainer = styled.div`
     transform: translateX(-50%);
   }
 `;
+ScrollUpButtonContainer.displayName = "ScrollUpButtonContainer";

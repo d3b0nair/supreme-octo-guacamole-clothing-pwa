@@ -1,6 +1,6 @@
 import OrderActionsTypes from "./order.types";
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   order: null,
   isLoading: false,
   errorMessage: undefined,

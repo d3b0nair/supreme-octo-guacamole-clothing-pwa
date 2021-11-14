@@ -6,10 +6,10 @@ import {
   ItemDetailsContainer,
 } from "./cart-item.styles";
 
-function CartItem({ item: { imageUrl, price, name, quantity } }) {
+export function CartItem({ item: { imageUrl, price, name, quantity } }) {
   return (
     <CartItemContainer>
-      <CartItemImg src={imageUrl} alt={name} />
+      <CartItemImg src={`${window.location.origin}/${imageUrl}`} alt={name} />
       <ItemDetailsContainer>
         <span>{name}</span>
         <span>

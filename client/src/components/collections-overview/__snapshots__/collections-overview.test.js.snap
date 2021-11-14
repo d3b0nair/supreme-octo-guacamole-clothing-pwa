@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionsOverview component should mount 1`] = `
+<div>
+  <div
+    class="sc-jrQzAO lesZzk"
+  />
+</div>
+`;

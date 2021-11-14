@@ -21,6 +21,7 @@ export const ButtonsBarContainer = styled.div`
   gap: 10px;
   justify-content: space-between;
   @media screen and (max-width: 800px) {
+    display: flex;
     flex-direction: column;
     margin-bottom: 40px;
   }

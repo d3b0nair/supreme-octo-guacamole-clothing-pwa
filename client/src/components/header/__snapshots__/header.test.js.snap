@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component should mount 1`] = `
+<div>
+  <header
+    class="sc-iqseJM bsgIPW"
+  >
+    <a
+      class="sc-crHmcD duzzOY"
+      href="/"
+    >
+      <svg
+        alt="logo"
+        class="logo"
+      >
+        logo.svg
+      </svg>
+    </a>
+    <div
+      class="sc-egiyK cOJwno"
+    >
+      <a
+        class="sc-ksdxgE pFRJN"
+        href="/shop"
+      >
+        SHOP
+      </a>
+      <a
+        class="sc-ksdxgE pFRJN"
+        href="/shop"
+      >
+        CONTACT
+      </a>
+      <div
+        class="sc-ksdxgE pFRJN"
+        data-testid="signout-link"
+      >
+        SIGN OUT
+      </div>
+      <div
+        class="sc-bdvvtL jTehkV"
+      >
+        <svg
+          class="sc-gsDKAQ tKSVz"
+        >
+          shopping-cart.svg
+        </svg>
+        <span
+          class="sc-dkPtRN hSsJJR"
+        >
+          0
+        </span>
+      </div>
+    </div>
+  </header>
+</div>
+`;

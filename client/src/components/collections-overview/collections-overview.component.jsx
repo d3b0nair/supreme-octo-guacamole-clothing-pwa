@@ -9,7 +9,7 @@ import { selectCollectionsForPreview } from "../../redux/shop/shop.selectors";
 
 import { CollectionsOverviewContainer } from "./collections-overview.styles.jsx";
 
-function CollectionsOverview({ collections }) {
+export function CollectionsOverview({ collections }) {
   return (
     <CollectionsOverviewContainer>
       {collections.map(({ id, ...otherCollectionProps }) => (

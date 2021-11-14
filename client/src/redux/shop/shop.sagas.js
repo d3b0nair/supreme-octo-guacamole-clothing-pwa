@@ -1,7 +1,8 @@
 import { takeLatest, call, put, all } from "redux-saga/effects";
+import { collection, getDocs } from "firebase/firestore";
 
 import {
-  firestore,
+  db,
   convertCollectionsSnapshotToMap,
 } from "../../firebase/firebase.utils";
 
@@ -14,8 +15,8 @@ import ShopActionsTypes from "./shop.types";
 
 export function* fetchCollectionsAsync() {
   try {
-    const collectionRef = firestore.collection("collections");
-    const snapshot = yield collectionRef.get();
+    const collectionRef = collection(db, "collections");
+    const snapshot = yield getDocs(collectionRef);
     const collectionsMap = yield call(
       convertCollectionsSnapshotToMap,
       snapshot

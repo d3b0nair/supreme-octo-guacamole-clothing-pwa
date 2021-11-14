@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput component should mount 1`] = `
+<styled.div>
+  <FormInputContainer
+    data-testid="FormInputContainer"
+    onChange={[MockFunction]}
+  />
+  <FormInputLabel
+    className="shrink form-input-label"
+    data-testid="FormInputLabel"
+  >
+    email
+  </FormInputLabel>
+</styled.div>
+`;

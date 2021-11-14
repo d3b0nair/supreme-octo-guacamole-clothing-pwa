@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StripePayments component should mount 1`] = `
+<div>
+  <div
+    class="sc-crHmcD jhDroC"
+  >
+    <form
+      class="sc-iCfMLu"
+    >
+      <fieldset
+        class="sc-furwcr fHpYvk"
+      >
+        <div
+          class="sc-bdvvtL hMBGla"
+        >
+          <input
+            autocomplete="name"
+            class="sc-gsDKAQ hVBime"
+            data-testid="FormInputContainer"
+            id="name"
+            required=""
+            type="text"
+          />
+          <label
+            class="sc-dkPtRN jpMQjL  form-input-label"
+            data-testid="FormInputLabel"
+          >
+            Full Name
+          </label>
+        </div>
+        <div
+          class="sc-bdvvtL hMBGla"
+        >
+          <input
+            autocomplete="email"
+            class="sc-gsDKAQ hVBime"
+            data-testid="FormInputContainer"
+            id="email"
+            required=""
+            type="email"
+          />
+          <label
+            class="sc-dkPtRN jpMQjL  form-input-label"
+            data-testid="FormInputLabel"
+          >
+            Email Address
+          </label>
+        </div>
+        <div
+          class="sc-bdvvtL hMBGla"
+        >
+          <input
+            autocomplete="tel"
+            class="sc-gsDKAQ hVBime"
+            data-testid="FormInputContainer"
+            id="phone"
+            required=""
+            type="tel"
+          />
+          <label
+            class="sc-dkPtRN jpMQjL  form-input-label"
+            data-testid="FormInputLabel"
+          >
+            Phone number
+          </label>
+        </div>
+      </fieldset>
+      <fieldset
+        class="sc-furwcr fHpYvk"
+      >
+        <div
+          class="sc-bdvvtL hMBGla"
+        >
+          <input
+            autocomplete="street-address"
+            class="sc-gsDKAQ hVBime"
+            data-testid="FormInputContainer"
+            id="street"
+            required=""
+            type="street"
+          />
+          <label
+            class="sc-dkPtRN jpMQjL  form-input-label"
+            data-testid="FormInputLabel"
+          >
+            Street Address
+          </label>
+        </div>
+        <div
+          class="sc-bdvvtL hMBGla"
+        >
+          <input
+            class="sc-gsDKAQ hVBime"
+            data-testid="FormInputContainer"
+            id="city"
+            required=""
+            type="city"
+          />
+          <label
+            class="sc-dkPtRN jpMQjL  form-input-label"
+            data-testid="FormInputLabel"
+          >
+            City
+          </label>
+        </div>
+        <div
+          class="sc-iqseJM ZTRnn"
+        >
+          <div
+            class="sc-bdvvtL hMBGla"
+          >
+            <input
+              class="sc-gsDKAQ hVBime"
+              data-testid="FormInputContainer"
+              id="state"
+              required=""
+              type="state"
+            />
+            <label
+              class="sc-dkPtRN jpMQjL  form-input-label"
+              data-testid="FormInputLabel"
+            >
+              State
+            </label>
+          </div>
+          <div
+            class="sc-bdvvtL hMBGla"
+          >
+            <input
+              class="sc-gsDKAQ hVBime"
+              data-testid="FormInputContainer"
+              id="zip"
+              required=""
+              type="zip"
+            />
+            <label
+              class="sc-dkPtRN jpMQjL  form-input-label"
+              data-testid="FormInputLabel"
+            >
+              Zip Code
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset
+        class="sc-furwcr fHpYvk"
+      >
+        <div
+          class="sc-pVTFL hObpPb"
+        >
+          <div
+            class="sc-kDTinF gpvLKs"
+          >
+            <div />
+          </div>
+        </div>
+      </fieldset>
+      <button
+        class="sc-hKwDye hzDzeB sc-jrQzAO dsEfPy"
+        type="submit"
+      >
+        Pay 1234$
+      </button>
+    </form>
+  </div>
+</div>
+`;

@@ -1,6 +1,6 @@
 import { CheckoutActionTypes } from "./checkout.types";
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   checkout_status: false,
   checkout_error: null,
 };

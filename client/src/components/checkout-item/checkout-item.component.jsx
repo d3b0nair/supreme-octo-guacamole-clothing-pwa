@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-
+import CustomButton from "../custom-button/custom-button.component";
 import {
   clearItemFromCart,
   addItem,
@@ -19,7 +19,8 @@ import {
   RemoveButtonWrapper,
 } from "./checkout-item.styles";
 
-function CheckoutItem({ cartItem, clearItem, addItem, removeItem }) {
+export function CheckoutItem({ cartItem, clearItem, addItem, removeItem }) {
+  const smallScreen = window.innerWidth < 300;
   const { name, imageUrl, price, quantity } = cartItem;
   return (
     <CheckoutItemContainer>
@@ -28,14 +29,33 @@ function CheckoutItem({ cartItem, clearItem, addItem, removeItem }) {
       </ImageContainer>
       <CollumnWrapper>{name}</CollumnWrapper>
       <QuantityCollumn>
-        <ArrowSymbol onClick={() => removeItem(cartItem)}>&#10094;</ArrowSymbol>
+        <ArrowSymbol
+          data-testid="remove-checkout-item"
+          onClick={() => removeItem(cartItem)}
+        >
+          &#10094;
+        </ArrowSymbol>
         <ItemValue>{quantity}</ItemValue>
-        <ArrowSymbol onClick={() => addItem(cartItem)}>&#10095;</ArrowSymbol>
+        <ArrowSymbol
+          data-testid="add-checkout-item"
+          onClick={() => addItem(cartItem)}
+        >
+          &#10095;
+        </ArrowSymbol>
       </QuantityCollumn>
-      <CollumnWrapper>{price}</CollumnWrapper>
+      <CollumnWrapper>
+        {smallScreen ? `Price: ${price}` : price}$
+      </CollumnWrapper>
       <RemoveButtonWrapper>
-        <RemoveButton onClick={() => clearItem(cartItem)}>
-          &#10005;
+        <RemoveButton
+          data-testid="clear-checkout-item"
+          onClick={() => clearItem(cartItem)}
+        >
+          {smallScreen ? (
+            <CustomButton inverted>Remove Item</CustomButton>
+          ) : (
+            "✕"
+          )}
         </RemoveButton>
       </RemoveButtonWrapper>
     </CheckoutItemContainer>

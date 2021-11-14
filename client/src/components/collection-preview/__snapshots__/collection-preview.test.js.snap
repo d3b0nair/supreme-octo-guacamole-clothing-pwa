@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionItem component should mount 1`] = `
+<div>
+  <div
+    class="sc-iCfMLu cChwTn"
+  >
+    <h1
+      class="sc-furwcr jHEmAL"
+      data-testid="TitleContainer"
+    />
+    <div
+      class="sc-pVTFL ifDaVZ"
+    />
+    <button
+      class="sc-bdvvtL gRKetO"
+      style="margin: 3vh 0px 3vh 0px;"
+    >
+      SHOW MORE 
+    </button>
+  </div>
+</div>
+`;

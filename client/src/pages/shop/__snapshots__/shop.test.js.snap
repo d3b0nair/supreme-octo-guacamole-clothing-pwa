@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShopPage Shop Page component should mount 1`] = `
+<div>
+  <div
+    class="sc-dkPtRN hhzQVa"
+  >
+    <div
+      class="sc-bdvvtL kHeCUE"
+    >
+      <div
+        class="sc-gsDKAQ bMJKwb"
+      />
+    </div>
+  </div>
+</div>
+`;

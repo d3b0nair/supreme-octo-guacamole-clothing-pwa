@@ -7,7 +7,7 @@ import { selectDirectorySections } from "../../redux/directory/directory.selecto
 
 import { DirectoryMenuContainer } from "./directory.styles.jsx";
 
-function Directory({ sections }) {
+export function Directory({ sections }) {
   return (
     <DirectoryMenuContainer>
       {sections.map(({ id, ...otherProps }) => (

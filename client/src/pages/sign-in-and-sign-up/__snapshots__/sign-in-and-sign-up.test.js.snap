@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn and SignUp Page should mount 1`] = `
+<div>
+  <div
+    class="sc-egiyK gqCjcp"
+  >
+    <div
+      class="sc-eCImPb kiJsgT"
+    >
+      <h2
+        class="sc-jRQBWg hRSpAi"
+      >
+        I already have an account
+      </h2>
+      <span>
+        Sign in with your email and password
+      </span>
+      <form>
+        <div
+          class="sc-bdvvtL hMBGla"
+        >
+          <input
+            class="sc-gsDKAQ hVBime"
+            data-testid="FormInputContainer"
+            name="email"
+            required=""
+            type="email"
+          />
+          <label
+            class="sc-dkPtRN jpMQjL  form-input-label"
+            data-testid="FormInputLabel"
+          >
+            E-Mail
+          </label>
+        </div>
+        <div
+          class="sc-bdvvtL hMBGla"
+        >
+          <input
+            class="sc-gsDKAQ hVBime"
+            data-testid="FormInputContainer"
+            name="password"
+            required=""
+            type="password"
+          />
+          <label
+            class="sc-dkPtRN jpMQjL  form-input-label"
+            data-testid="FormInputLabel"
+          >
+            Password
+          </label>
+        </div>
+        <div
+          class="sc-gKclnd idUVbs"
+        >
+          <button
+            class="sc-hKwDye hzDzeB"
+            type="submit"
+          >
+            Sign in
+          </button>
+          <button
+            class="sc-hKwDye hPNorZ"
+            data-testid="CustomButtonForGoogleSignInStart"
+            type="button"
+          >
+            Sign in with Google
+          </button>
+        </div>
+      </form>
+    </div>
+    <div
+      class="sc-iCfMLu cUjxrA"
+    >
+      <h2
+        class="sc-kDTinF laMaXn"
+      >
+        I do not have an account
+      </h2>
+      <span>
+        Sign up with your email and password
+      </span>
+      <form
+        class="sign-up-form"
+      >
+        <div
+          class="sc-bdvvtL hMBGla"
+        >
+          <input
+            class="sc-gsDKAQ hVBime"
+            data-testid="displayName"
+            name="displayName"
+            required=""
+            type="text"
+          />
+          <label
+            class="sc-dkPtRN jpMQjL  form-input-label"
+            data-testid="FormInputLabel"
+          >
+            Display Name
+          </label>
+        </div>
+        <div
+          class="sc-jrQzAO gWnczy"
+        >
+          <div
+            class="sc-bdvvtL hMBGla"
+          >
+            <input
+              class="sc-gsDKAQ hVBime"
+              data-testid="email"
+              name="email"
+              required=""
+              type="email"
+            />
+            <label
+              class="sc-dkPtRN jpMQjL  form-input-label"
+              data-testid="FormInputLabel"
+            >
+              Email
+            </label>
+          </div>
+        </div>
+        <div
+          class="sc-jrQzAO gWnczy"
+        >
+          <div
+            class="sc-bdvvtL hMBGla"
+          >
+            <input
+              class="sc-gsDKAQ hVBime"
+              data-testid="password"
+              name="password"
+              pattern="^(?=.*)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+              required=""
+              type="password"
+            />
+            <label
+              class="sc-dkPtRN jpMQjL  form-input-label"
+              data-testid="FormInputLabel"
+            >
+              Password
+            </label>
+          </div>
+          <svg
+            class="sc-pVTFL illzAJ"
+          >
+            hidden.svg
+          </svg>
+        </div>
+        <div
+          class="sc-jrQzAO gWnczy"
+        >
+          <div
+            class="sc-bdvvtL hMBGla"
+          >
+            <input
+              class="sc-gsDKAQ hVBime"
+              data-testid="confirmPassword"
+              name="confirmPassword"
+              required=""
+              type="password"
+            />
+            <label
+              class="sc-dkPtRN jpMQjL  form-input-label"
+              data-testid="FormInputLabel"
+            >
+              Confirm Password
+            </label>
+          </div>
+          <svg
+            class="sc-pVTFL illzAJ"
+          >
+            hidden.svg
+          </svg>
+        </div>
+        <button
+          class="sc-hKwDye hzDzeB"
+          data-testid="CustomButtonForSubmit"
+          style="width: 100%;"
+          type="submit"
+        >
+          Sign up
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+`;

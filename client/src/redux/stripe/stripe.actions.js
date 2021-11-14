@@ -1,5 +1,4 @@
 import StripeActionTypes from "./stripe.types";
-
 export const createPaymentIntentID = (id) => ({
   type: StripeActionTypes.CREATE_PAYMENT_INTENT_ID,
   payload: id,
@@ -72,4 +71,7 @@ export const cancelClientSecret_failure = (error) => ({
 
 export const cancelClientSecret_success = () => ({
   type: StripeActionTypes.CANCEL_CLIENT_SECRET_SUCCESS,
+});
+export const stripeReset = () => ({
+  type: StripeActionTypes.STRIPE_RESET,
 });

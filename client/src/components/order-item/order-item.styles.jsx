@@ -14,6 +14,9 @@ const padding = css`
 
 const lineHeight = css`
   line-height: 55%;
+  @media screen and (max-width: 800px) {
+    line-height: 100%;
+  }
 `;
 
 export const OrderContainer = styled.div`
@@ -73,7 +76,7 @@ export const TotalPrice = styled.h4`
 
 export const ItemsPreview = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   border: 1px solid rgba(255, 255, 255, 1);
   ${frostedGlass}

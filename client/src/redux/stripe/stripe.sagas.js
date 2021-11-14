@@ -17,6 +17,7 @@ import {
   updatePaymentIntent_failure,
   cancelPaymentIntent_success,
   cancelPaymentIntent_failure,
+  stripeReset,
 } from "./stripe.actions";
 
 export function* createClientSecretSTART(clientSecret) {
@@ -106,7 +107,7 @@ export function* cancelPaymentIntentSTART({ payload: { id } }) {
       },
       body: JSON.stringify({ id }),
     });
-    yield cancelClientSecretSTART();
+    yield put(cancelClientSecretSTART());
     yield put(cancelPaymentIntent_success());
   } catch (error) {
     yield put(cancelPaymentIntent_failure(error));
@@ -121,12 +122,11 @@ export function* cancelPaymentIntent() {
 }
 
 export function* cleanUp() {
-  yield cancelClientSecretSTART();
-  yield put(cancelPaymentIntent_success());
+  yield put(stripeReset());
 }
 
 export function* paymentIntentSucceded() {
-  yield takeLatest(CheckoutActionTypes.CHECKOUT_SUCCEDED, cleanUp);
+  yield takeLatest(CheckoutActionTypes.CHECKOUT_RESET, cleanUp);
 }
 
 export function* stripeSagas() {

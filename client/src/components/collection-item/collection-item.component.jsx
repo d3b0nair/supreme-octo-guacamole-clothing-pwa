@@ -11,16 +11,23 @@ import {
   AddToCartButton,
 } from "./collection-item.styles";
 
-function CollectionItem({ item, addItem }) {
+export function CollectionItem({ item, addItem }) {
   const { id, name, price, imageUrl } = item;
   return (
     <CollectionItemContainer key={id}>
-      <ImageContainer className="image" url={imageUrl} />
+      <ImageContainer
+        className="image"
+        url={`${window.location.origin}/${imageUrl}`}
+      />
       <CollectionFooterContainer>
         <ItemName>{name}</ItemName>
         <ItemPrice>{price}$</ItemPrice>
       </CollectionFooterContainer>
-      <AddToCartButton inverted onClick={() => addItem(item)}>
+      <AddToCartButton
+        data-testid="AddToCartButton"
+        inverted
+        onClick={() => addItem(item)}
+      >
         Add to cart
       </AddToCartButton>
     </CollectionItemContainer>

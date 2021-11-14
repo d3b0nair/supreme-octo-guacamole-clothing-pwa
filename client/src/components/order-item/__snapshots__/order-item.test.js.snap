@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrderItem component should mount 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL joPSmO"
+  >
+    <div
+      class="sc-jrQzAO bmzRBB"
+    >
+      Order: 
+    </div>
+    <h2
+      class="sc-dkPtRN jjcHws"
+    >
+      Delivery details:
+    </h2>
+    <div
+      class="sc-furwcr gnIKgj"
+    >
+      <div
+        class="sc-gKclnd cCFUfP"
+      >
+        <p
+          class="sc-pVTFL ggGDnf"
+        >
+          Name: 
+          
+        </p>
+        <p
+          class="sc-pVTFL ggGDnf"
+        >
+          Email: 
+          
+        </p>
+        <p
+          class="sc-pVTFL ggGDnf"
+        >
+          Phone number: 
+          
+           
+        </p>
+      </div>
+      <div
+        class="sc-iCfMLu bXrODd"
+      >
+        <p
+          class="sc-pVTFL ggGDnf"
+        >
+          Street Adress: 
+          
+        </p>
+        <p
+          class="sc-pVTFL ggGDnf"
+        >
+          City: 
+          
+        </p>
+        <p
+          class="sc-pVTFL ggGDnf"
+        >
+          State: 
+          
+           
+        </p>
+        <p
+          class="sc-pVTFL ggGDnf"
+        >
+          Zip Code: 
+          
+           
+        </p>
+      </div>
+    </div>
+    <h2
+      class="sc-dkPtRN jjcHws"
+    >
+      Purchased Goods:
+    </h2>
+    <div
+      class="sc-jRQBWg dcFORt"
+    />
+    <h4
+      class="sc-eCImPb ecssnl"
+    >
+      TOTAL: $
+      
+    </h4>
+    <p
+      class="sc-kDTinF ooKlQ"
+    >
+      Purchased at 
+      
+    </p>
+  </div>
+</div>
+`;

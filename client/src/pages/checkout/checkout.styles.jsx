@@ -10,17 +10,20 @@ const RowSize = css`
   }
 `;
 
+export const container_media_margin = 10;
+export const container_top_bottom_margin = 30;
+
 export const CheckoutPageContainer = styled.div`
   width: 700px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin: 30px auto;
+  margin: ${container_top_bottom_margin}px auto;
   h2 {
     text-align: center;
   }
   @media screen and (max-width: 800px) {
-    margin: 10px;
+    margin: ${container_media_margin}px;
     width: auto;
   }
 `;
@@ -36,12 +39,20 @@ export const CartHeader = styled.div`
   div {
     text-transform: capitalize;
   }
+  @media screen and (max-width: 300px) {
+    display: none;
+  }
 `;
 
 export const TotalPrice = styled.div`
   margin-top: 30px;
   margin-left: auto;
   font-size: 36px;
+  @media screen and (max-width: 800px) {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-right: auto;
+  }
 `;
 
 export const CartContainer = styled.div`
@@ -59,10 +70,9 @@ export const CartContainer = styled.div`
 export const Cart = styled.div`
   ${frostedGlass}
   padding: 10px;
-
   ${RowSize}
 `;
-export const ProcessPayment = styled.div`
+export const StripeContainer = styled.div`
   margin: 0 25px 0 25px;
 
   @media screen and (max-width: 800px) {

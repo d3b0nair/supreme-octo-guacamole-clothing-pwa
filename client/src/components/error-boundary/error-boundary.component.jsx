@@ -1,4 +1,6 @@
 import React from "react";
+import CustomButton from "../custom-button/custom-button.component";
+import history from "../../history";
 
 import {
   ErrorImageOverlay,
@@ -33,6 +35,14 @@ class ErrorBoundary extends React.Component {
             up from the bleachers. Freshman were known to walk under them and
             tie peoples’ shoes together.
           </ErrorImageText>
+          <CustomButton
+            inverted
+            onClick={() => {
+              history.go(0);
+            }}
+          >
+            RELOAD PAGE
+          </CustomButton>
         </ErrorImageOverlay>
       );
     } else {

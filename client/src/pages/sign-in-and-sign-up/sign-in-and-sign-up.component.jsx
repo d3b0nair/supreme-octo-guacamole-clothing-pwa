@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import SignIn from "../../components/sign-in/sign-in.component";
 import SignUp from "../../components/sign-up/sign-up.component";
 import CustomButton from "../../components/custom-button/custom-button.component";
@@ -6,28 +6,41 @@ import CustomButton from "../../components/custom-button/custom-button.component
 import { SignInAndSignUpContainer } from "./sign-in-and-sign-up.styles.jsx";
 
 function SignInAndSignUpPage() {
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
-  });
   const [renderSignUpForMobile, setRenderSignUpForMobile] = useState(false);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const lastWidth = useRef();
   useEffect(() => {
-    setWindowSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
-  }, []);
-
-  const renderDesktopPage = () =>
-    windowSize.width > 800 ? (
-      <>
-        <SignIn />
-        <SignUp />
-      </>
-    ) : null;
-
-  const renderMobileView = () => {
-    if (renderSignUpForMobile === true && windowSize.width < 800) {
+    const listenResizeEvent = () => {
+      if (window.innerWidth !== lastWidth.current) {
+        lastWidth.current = window.innerWidth;
+        setWindowSize(window.innerWidth);
+        windowSize > 800
+          ? setRenderSignUpForMobile(true)
+          : setRenderSignUpForMobile(false);
+      }
+    };
+    if (
+      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      )
+    ) {
+      return;
+    } else {
+      window.addEventListener("resize", listenResizeEvent);
+    }
+    return () => {
+      window.removeEventListener("resize", listenResizeEvent);
+    };
+  }, [windowSize]);
+  const RenderPage = () => {
+    if (windowSize > 800) {
+      return (
+        <>
+          <SignIn />
+          <SignUp />
+        </>
+      );
+    } else if (renderSignUpForMobile === true && windowSize < 800) {
       return (
         <>
           <SignUp />
@@ -39,19 +52,20 @@ function SignInAndSignUpPage() {
           </CustomButton>
         </>
       );
-    } else if (renderSignUpForMobile === false && windowSize.width < 800)
-      return <>
-        <SignIn />
-        <CustomButton onClick={() => setRenderSignUpForMobile(true)}>
-          Sign up with email
-        </CustomButton>
-      </>;
+    } else if (renderSignUpForMobile === false && windowSize < 800)
+      return (
+        <>
+          <SignIn />
+          <CustomButton onClick={() => setRenderSignUpForMobile(true)}>
+            Sign up with email
+          </CustomButton>
+        </>
+      );
   };
 
   return (
     <SignInAndSignUpContainer>
-      {renderDesktopPage()}
-      {renderMobileView()}
+      <RenderPage />
     </SignInAndSignUpContainer>
   );
 }

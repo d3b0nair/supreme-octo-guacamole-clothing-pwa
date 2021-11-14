@@ -20,11 +20,6 @@ export const CollectionItemContainer = styled.div`
   padding: 10px;
   margin: 3px;
   ${frostedGlass}
-  @media screen and (max-width: 888px) {
-    width: 80vw;
-    margin: 0 0 10px 0;
-    ${"" /* flex-direction: column-reverse; */}
-  }
   &:hover {
     .image {
       opacity: 0.8;
@@ -32,6 +27,18 @@ export const CollectionItemContainer = styled.div`
     button {
       opacity: 0.85;
       display: flex;
+    }
+  }
+  @media screen and (max-width: 888px) {
+    width: 80vw;
+    margin: 0 0 10px 0;
+    ${"" /* flex-direction: column-reverse; */}
+  }
+  @media screen and (max-width: 300px) {
+    &:hover {
+      button {
+        display: block;
+      }
     }
   }
 `;
@@ -75,3 +82,4 @@ export const AddToCartButton = styled(CustomButton)`
     opacity: 1;
   }
 `;
+AddToCartButton.displayName = "AddToCartButton";

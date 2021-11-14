@@ -6,11 +6,15 @@ const mainColor = "white";
 const shrinkLabelStyles = css`
   top: -1.5em;
   left: 0;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: ${mainColor};
+  @media screen and (max-width: 300px) {
+    font-size: 1.2em;
+  }
 `;
 
-export const GroupContainer = styled.div`
+
+export const FormContainer = styled.div`
   position: relative;
   margin: 11% 0;
   @media screen and (max-width: 800px) {
@@ -39,6 +43,7 @@ export const FormInputContainer = styled.input`
     ${shrinkLabelStyles}
   }
 `;
+FormInputContainer.displayName = "FormInputContainer";
 
 export const FormInputLabel = styled.label`
   color: ${subColor};
@@ -53,3 +58,4 @@ export const FormInputLabel = styled.label`
     ${shrinkLabelStyles}
   }
 `;
+FormInputLabel.displayName = "FormInputLabel";
